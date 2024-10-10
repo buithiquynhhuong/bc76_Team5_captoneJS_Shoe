@@ -7,52 +7,223 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./bootstrap_5.3/css/bootstrap.min.css">
+    <!-- FontAwesome 6.2.0 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+        href="/css/app-wa-d53d10572a0e0d37cb8d614a3f177a0c.css?vsn=d" />
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css" />
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css" />
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css" />
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css" />
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css" />
+    <link rel="stylesheet" href="./css/register.css">
+
+
 </head>
 
 <body>
+    <header class=" position-relative w-100 overflow-hidden">
+        <div class="position-absolute border-bottom container-fluid content_header p-8">
+            <nav>
+                <ul class="d-flex">
+                    <li><a class="fs-5" href="#">Home</a></li>
+                    <li><a class="fs-5" href="#">Shop</a></li>
+                    <li><a class="fs-5" href="#">Blog</a></li>
+                    <li><a class="fs-5" href="#">Portfolio</a></li>
+                    <li><a class="fs-5" href="#">Pages</a></li>
+                    <li><a class="fs-5" href="#">My Account</a></li>
+                </ul>
+            </nav>
+            <div class="logo_nav">
+                <a href="./index.html"><img src="./images/logo.png" alt=""></a>
+            </div>
+            <div class="extra_nav">
+                <div class="header_right">
+                    <ul>
+                        <li>
+                            <!-- input search -->
+                            <div class="container_search_header p-2">
+                                <input class="ps-3 search_header" type="text" placeholder="I'm Search For ...">
+                                <!-- button_search -->
+                                <i class=" fa-light fa-magnifying-glass"></i>
+                            </div>
+
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-light fa-heart"></i>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-regular fa-cart-circle-plus"></i>
+                            </a>
+
+                        </li>
+                        <li>
+                            <button class="btn btn-dark btn_login_header">Login</button>
+                        </li>
+                        <li>
+                            <button class="btn btn-light btn_register_header"><a
+                                    href="./register.html">Register</a></button>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </div>
+        <!-- <div class="container_video_header position-absolute "> -->
+        <!-- <video class="w-100" autoplay muted loop playsinline>
+                <source src="./images/bg-video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> -->
+        <!-- </div> -->
+
+        <!-- <div class="title_header position-absolute top-50 start-50 translate-middle ">
+            <h1 class="text-white ">Bays cant start with out perfect shoes.</h1>
+            <a class="btn btn-outline-light btn-lg justify-center" href="#">View All Collection</a>
+        </div> -->
+
+    </header>
     <main>
-        <div class="container form-container">
-            <h2>Register</h2>
-            <form id="signupForm">
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email here" required />
-                </div>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter your name here" required />
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required />
-                </div>
-                <div class="mb-3">
-                    <label for="confirmPassword" class="form-label">Confirm Password</label>
-                    <input type="password" class="form-control" id="confirmPassword" placeholder="Re-enter your password here" required />
-                </div>
-                <div class="mb-3">
-                    <label for="phone" class="form-label">Phone Number</label>
-                    <input type="number" class="form-control" id="phone" placeholder="Enter your phone number here" required />
-                </div>
-                <div class="mb-3 gender-section">
-                    <h5>Gender</h5>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gender" value="true" id="male" checked>
-                        <label class="form-check-label" for="male">Male</label>
+        <div class="container form-image-wrapper d-flex justify-content-between">
+            <!-- Sign Up Form Container -->
+            <div class="form-container">
+                <h2>Sign Up</h2>
+                <form id="signupForm">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email here" required />
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gender" value="false" id="female">
-                        <label class="form-check-label" for="female">Female</label>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name here" required />
                     </div>
-                </div>
-                <button type="submit" class="btn btn-success btn-submit mt-3">Submit</button>
-            </form>
-            <div id="result" class="mt-4"></div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Re-enter your password" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="number" class="form-control" id="phone" placeholder="Enter your phone number here" required />
+                    </div>
+                    <div class="mb-3 gender-section">
+                        <h5>Gender</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" value="male" id="male" checked>
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" value="female" id="female">
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-dark btn-submit mt-3">Sign Up</button>
+                </form>
+                <div id="result" class="mt-4"></div>
+            </div>
+            
+            <!-- Image Section -->
+            <div class="image-container px-4">
+                <img src="./images/signup.jpg" alt="Sign Up Image" class="img-fluid full-width-image" />
+            </div>
         </div>
     </main>
+    
+    
+
+    <footer>
+        <div class="container_footer bg-black">
+            <div class="container cotainer_logo_footer">
+                <div class="row">
+                    <div class="col-6">
+                        <img src="./images/logo-white.svg" alt="">
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <i class="fa-brands fa-facebook text-white fs-1 mr-2"></i>
+                        <i class="fa-brands fa-instagram text-white fs-1"></i>
+                        <i class="fa-brands fa-twitter text-white fs-1"></i>
+                        <i class="fa-brands fa-linkedin text-white fs-1"></i>
+                    </div>
+                </div>
+            </div>
+            <div class=" border-top border-secondary ">
+                <div class="container container_info_footer">
+                    <div class="row justify-content-between">
+                        <div class="col-3">
+                            <h4>Our Stores</h4>
+                            <ul>
+                                <li>New York</li>
+                                <li>London SF</li>
+                                <li>Edinburgh</li>
+                                <li>Los Angeles</li>
+                                <li>Chicago</li>
+                                <li>Las Vegas</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-3">
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li>Privacy Policy</li>
+                                <li>Returns</li>
+                                <li>Terms & Conditions</li>
+                                <li>Contact Us</li>
+                                <li>Latest News</li>
+                                <li>Our Sitemap</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-3">
+                            <h4>Footer Menu</h4>
+                            <ul>
+                                <li>Instagram profile</li>
+                                <li>New Collection</li>
+                                <li>Popular Plant</li>
+                                <li>Contact Us</li>
+                                <li>Latest News</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-3">
+                            <h4>Community</h4>
+                            <ul>
+                                <li>Issues</li>
+                                <li>Discussions</li>
+                                <li>Corporate sponsors</li>
+                                <li>Contact Us</li>
+                                <li>Blogs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
 </body>
 
 </html>
