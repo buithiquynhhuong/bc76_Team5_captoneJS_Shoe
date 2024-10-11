@@ -470,3 +470,56 @@ footer .fa-brands {
     font-size: 10px;
   }
 }
+/* css card product api */
+.custom-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.2s;
+}
+.custom-card:hover {
+  transform: scale(1.05);
+}
+.custom-card-img {
+  width: 100%;
+  height: auto;
+}
+.custom-card-img-container {
+  position: relative;
+}
+.add-to-cart {
+  background-color: #f7d9c4;
+  border-radius: 50%;
+  padding: 10px;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  z-index: 1;
+  transition: background-color 0.3s;
+}
+.add-to-cart:hover {
+  background-color: #f0b395;
+}
+.add-to-cart i {
+  color: #fff;
+}
+.custom-card-body {
+  padding: 15px;
+}
+.custom-card-text {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.price_product {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.checked {
+  color: orange;
+}
+.custom-card-footer {
+  padding: 0 15px 15px;
+}
