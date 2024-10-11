@@ -36,7 +36,7 @@ nav ul li a {
 
 /* header right */
 header {
-  height: 75vh;
+  height: 70vh;
 }
 header .extra_nav .header_right ul {
   display: flex;
@@ -122,7 +122,7 @@ body .container_video_header {
 .title_header {
   display: flex;
   flex-direction: column;
-  z-index: 2;
+  z-index: 0;
 }
 .title_header h1 {
   font-size: 120px;
@@ -155,7 +155,7 @@ body .section_products .card .card-body {
 }
 .container_adv {
   background-image: url("../images/product2.jpg");
-  height: 700px;
+  height: auto;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -165,6 +165,7 @@ body .section_products .card .card-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 20px 40px;
 }
 .title_adv p {
   font-size: 24px;
@@ -194,7 +195,8 @@ body .section_products .card .card-body {
 /* bo tròn ảnh phía trên 20px */
 .section_discover .img_section_discover img {
   border-radius: 250px 250px 0 0;
-  height: 500px;
+  height: auto;
+  width: 100%;
 }
 
 .content_discover h2 {
@@ -204,14 +206,20 @@ body .section_products .card .card-body {
 
 /* section discover */
 .card_carousle img {
-  height: 300px;
+  height: auto;
+  max-width: 100%;
   width: 100%;
   object-fit: cover;
+  background-position: center;
+}
+.item_carousel {
+  width: 100% !important;
 }
 .icon_add_discover {
   background-color: #aaaaaa;
   color: #fff;
   font-size: 20px;
+  padding: 10px;
 }
 .slick-slide {
   margin: 0 10px; /* Thêm padding để tạo khoảng cách giữa các items */
@@ -344,4 +352,174 @@ footer .fa-brands {
 }
 .container_info_footer ul li {
   margin-bottom: 10px;
+}
+
+/* reponsive */
+@media (max-width: 1700px) {
+  header {
+    /* height: 40vh; */
+  }
+  .title_header h1 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 1500px) {
+  html body nav ul,
+  .extra_nav {
+    display: none !important;
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+    /* height: 30vh; */
+  }
+  .title_header h1 {
+    font-size: 35px;
+  }
+
+  .title_adv h2 {
+    font-size: 25px;
+  }
+  .title_adv p {
+    font-size: 10px;
+  }
+  .title_adv button {
+    width: 100px;
+    font-size: 12px;
+  }
+
+  html body nav ul.menu_reponsive,
+  .extra_nav {
+    display: none !important;
+  }
+
+  /* Hiển thị nút menu-toggle */
+  .menu-toggle {
+    display: block !important;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    z-index: 3;
+    cursor: pointer;
+  }
+  .icon_nav_reponsive {
+    font-size: 35px;
+    font-weight: 600;
+    padding: 10px;
+  }
+  .content_header {
+    justify-content: start !important;
+  }
+
+  /* Hiển thị menu điều hướng khi người dùng nhấn vào menu-toggle */
+  header.menu-open nav ul.menu_reponsive {
+    display: flex !important;
+    flex-direction: column;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.8
+    ) !important; /* Màu nền của menu khi mở */
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    height: 500px;
+    padding: 20px;
+  }
+
+  .menu-open nav ul li {
+    margin: 10px 0;
+  }
+
+  .menu-open nav ul li a {
+    color: white; /* Đổi màu chữ thành màu trắng */
+  }
+}
+
+/* Ẩn nút menu-toggle khi màn hình lớn hơn 992px */
+.menu-toggle {
+  display: none;
+}
+@media (max-width: 700px) {
+  header {
+    /* height: 30vh; */
+  }
+  .title_header h1 {
+    font-size: 25px;
+  }
+  .title_header a {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    /* height: 15vh; */
+  }
+  .title_header h1 {
+    font-size: 15px;
+    padding-top: 100px;
+  }
+  .title_header a {
+    display: none;
+    width: 20%;
+    font-size: 10px;
+  }
+}
+/* css card product api */
+.custom-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.2s;
+}
+.custom-card:hover {
+  transform: scale(1.05);
+}
+.custom-card-img {
+  width: 100%;
+  height: auto;
+}
+.custom-card-img-container {
+  position: relative;
+}
+.add-to-cart {
+  background-color: #f7d9c4;
+  border-radius: 50%;
+  padding: 10px;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  z-index: 1;
+  transition: background-color 0.3s;
+}
+.add-to-cart:hover {
+  background-color: #f0b395;
+}
+.add-to-cart i {
+  color: #fff;
+}
+.custom-card-body {
+  padding: 15px;
+}
+.custom-card-text {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.price_product {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.checked {
+  color: orange;
+}
+.custom-card-footer {
+  padding: 0 15px 15px;
 }
