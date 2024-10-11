@@ -18,6 +18,10 @@ body {
     height: auto;
     border-radius: 5px;
 }
+
+.image-thumbnails {
+    margin-top: 10px;
+}
 .image-thumbnails img {
     width: 20%;
     height: auto;
@@ -96,13 +100,52 @@ button {
 }
 
 .carousel-items {
-    display: flex; /* Use flexbox for alignment */
+    display: flex; /* Align items in a row */
+    transition: transform 0.5s ease; /* Smooth transition */
 }
 
 .carousel-item {
-    flex: 0 0 25%; /* Set each item to take 25% of the container width */
+    flex: 0 0 25%; /* Default to 4 items per row */
+    padding: 10px; /* Add some spacing */
     box-sizing: border-box; /* Ensure padding is included in width */
-    padding: 10px; /* Add some space between items */
+}
+
+@media (max-width: 1200px) {
+    .carousel-item {
+        flex: 0 0 33.33%; /* 3 items per row for medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .carousel-item {
+        flex: 0 0 50%; /* 2 items per row for small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        flex: 0 0 100%; /* 1 item per row for extra small screens */
+    }
+    .product-info {
+        margin-top: 20px;
+
+    }
+
+    .image-thumbnails img {
+        width: 30%;
+    }
+
+    .product-details {
+        flex-direction: column;
+    }
+
+    .product-images {
+        width: 100%;
+    }
+
+    .product-info {
+        width: 100%;
+    }
 }
 
 .carousel-item img {
