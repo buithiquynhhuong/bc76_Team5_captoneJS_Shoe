@@ -56,3 +56,6 @@ $(document).ready(function() {
         ]
     });
 });
+
+
+// Lấy tham số trên parameter
