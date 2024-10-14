@@ -1,61 +1,60 @@
-// <!-- function đổi hình sản phẩm theo màu sắc -->
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the product ID from the URL parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get("id");
 
-function changeColor(color) {
-    var mainImage = document.getElementById("main-image");
-    var thumb1 = document.getElementById("thumb1");
-    var thumb2 = document.getElementById("thumb2");
-    var thumb3 = document.getElementById("thumb3");
-    var thumb4 = document.getElementById("thumb4");
+  // Check if the product ID exists
+  if (productId) {
+    // Fetch product details using the product ID
+    fetch(`https://shop.cyberlearn.vn/api/Product/getbyid?id=${productId}`)
+      .then((response) => response.json())
+      .then((data) => {
+        // Check if product data is valid
+        if (data.content) {
+          displayProductDetails(data.content);
+        } else {
+          console.error("Product not found");
+        }
+      })
+      .catch((error) =>
+        console.error("Error fetching product details:", error)
+      );
+  } else {
+    console.error("No product ID found in the URL");
+  }
 
-    if (color === "black") {
-        // Change main image
-        mainImage.src = "./images/AIR+MAX+270-black-right.png";
+  // Function to display product details
+  function displayProductDetails(product) {
+    // Set product image
+    document.querySelector(".product-image").src = product.image;
 
-        // Change thumbnails
-        thumb1.src = "./images/AIR+MAX+270black-left.jpg";
-        thumb2.src = "./images/AIR+MAX+270behind.png";
-        thumb3.src = "./images/AIR+MAX+270real.jpg";
-        thumb4.src = "./images/AIR+MAX+270-black-top.png";
-    } else if (color === "white") {
-        // Change main image
-        mainImage.src = "./images/AIR+MAX+270.png";
+    // Set product name
+    document.querySelector(".product-right h1").textContent = product.name;
 
-        // Change thumbnails
-        thumb1.src = "./images/AIR+MAX+270(1).png";
-        thumb2.src = "./images/AIR+MAX+270(2).png";
-        thumb3.src = "./images/AIR+MAX+270(3).png";
-        thumb4.src = "./images/AIR+MAX+270(4).png";
+    // Set product description
+    document.querySelector(".description").textContent = product.description;
+
+    // Set product price
+    document.querySelector(
+      ".price"
+    ).textContent = `$ ${product.price.toLocaleString()}`;
+
+    // Set product quantity (corrected this line)
+    document.querySelector(
+      ".quantity"
+    ).textContent = `Available quantity: ${product.quantity.toLocaleString()}`;
+
+    // Populate available sizes in the dropdown
+    const sizeSelect = document.getElementById("sizes");
+    if (Array.isArray(product.size)) {
+      product.size.forEach((size) => {
+        const option = document.createElement("option");
+        option.value = size;
+        option.textContent = size;
+        sizeSelect.appendChild(option);
+      });
+    } else {
+      console.error("Product sizes are not available.");
     }
-}
-
-$(document).ready(function() {
-    $('.carousel-items').slick({
-        slidesToShow: 4, // Default to 4
-        slidesToScroll: 1,
-        prevArrow: $('.prev'),
-        nextArrow: $('.next'),
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 3 // 3 items for medium screens
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2 // 2 items for small screens
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1 // 1 item for extra small screens
-                }
-            }
-        ]
-    });
+  }
 });
-
-
-// Lấy tham số trên parameter
