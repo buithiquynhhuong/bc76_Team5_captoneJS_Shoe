@@ -140,3 +140,120 @@ h1 {
   height: 270px;
 }
 
+/* reponsive */
+@media (max-width: 1700px) {
+  header {
+    /* height: 40vh; */
+  }
+  .title_header h1 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 1500px) {
+  html body nav ul,
+  .extra_nav {
+    display: none !important;
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+    /* height: 30vh; */
+  }
+  .title_header h1 {
+    font-size: 35px;
+  }
+
+  .title_adv h2 {
+    font-size: 25px;
+  }
+  .title_adv p {
+    font-size: 10px;
+  }
+  .title_adv button {
+    width: 100px;
+    font-size: 12px;
+  }
+
+  html body nav ul.menu_reponsive,
+  .extra_nav {
+    display: none !important;
+  }
+
+  /* Hiển thị nút menu-toggle */
+  .menu-toggle {
+    display: block !important;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    z-index: 3;
+    cursor: pointer;
+  }
+  .icon_nav_reponsive {
+    font-size: 35px;
+    font-weight: 600;
+    padding: 10px;
+  }
+  .content_header {
+    justify-content: start !important;
+  }
+
+  /* Hiển thị menu điều hướng khi người dùng nhấn vào menu-toggle */
+  header.menu-open nav ul.menu_reponsive {
+    display: flex !important;
+    flex-direction: column;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.8
+    ) !important; /* Màu nền của menu khi mở */
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    height: 500px;
+    padding: 20px;
+  }
+
+  .menu-open nav ul li {
+    margin: 10px 0;
+  }
+
+  .menu-open nav ul li a {
+    color: white; /* Đổi màu chữ thành màu trắng */
+  }
+}
+
+/* Ẩn nút menu-toggle khi màn hình lớn hơn 992px */
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  header {
+    /* height: 30vh; */
+  }
+  .title_header h1 {
+    font-size: 25px;
+  }
+  .title_header a {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    /* height: 15vh; */
+  }
+  .title_header h1 {
+    font-size: 15px;
+    padding-top: 100px;
+  }
+  .title_header a {
+    display: none;
+    width: 20%;
+    font-size: 10px;
+  }
+}

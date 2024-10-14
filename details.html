@@ -39,13 +39,18 @@
     <link rel="stylesheet" href="./css/register.css">
     <link rel="stylesheet" href="./css/details.css">
 
+
 </head>
 
 <body>
     <header class=" position-relative w-100 overflow-hidden">
+        <!-- menu toggle -->
+        <div class="menu-toggle">
+            <i class="fa-solid fa-bars icon_nav_reponsive"></i>
+        </div>
         <div class="position-absolute border-bottom container-fluid content_header p-8">
             <nav>
-                <ul class="d-flex">
+                <ul class="d-flex menu_reponsive">
                     <li><a class="fs-5" href="#">Home</a></li>
                     <li><a class="fs-5" href="#">Shop</a></li>
                     <li><a class="fs-5" href="#">Blog</a></li>
@@ -96,9 +101,9 @@
         <div class="container product-details">
             <!-- Product Information -->
             <div class="container">
-                <div class="product-item">
-                    <div class="product-left">
-                        <img src="" alt="Product Image" class="product-image">
+                <div class="product-item row">
+                    <div class="product-left col-md-6 col-12">
+                        <img src="" alt="Product Image" class="product-image img-fluid">
                         <div class="thumbnails">
                             <img class="thumbnail" src="./images/AIR+MAX+270(1).png" alt="Thumbnail 1"
                                 data-full="image1.jpg">
@@ -110,7 +115,7 @@
                                 data-full="image4.jpg">
                         </div>
                     </div>
-                    <div class="product-right">
+                    <div class="product-right col-md-6 col-12">
                         <h1 style="text-transform: capitalize;"></h1>
                         <p class="description" style="text-transform: capitalize;"></p>
                         <div class="sizes">
