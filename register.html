@@ -39,9 +39,13 @@
 
 <body>
     <header class=" position-relative w-100 overflow-hidden">
+        <!-- menu toggle -->
+        <div class="menu-toggle">
+            <i class="fa-solid fa-bars icon_nav_reponsive"></i>
+        </div>
         <div class="position-absolute border-bottom container-fluid content_header p-8">
             <nav>
-                <ul class="d-flex">
+                <ul class="d-flex menu_reponsive">
                     <li><a class="fs-5" href="#">Home</a></li>
                     <li><a class="fs-5" href="#">Shop</a></li>
                     <li><a class="fs-5" href="#">Blog</a></li>
@@ -91,17 +95,6 @@
 
 
         </div>
-        <!-- <div class="container_video_header position-absolute "> -->
-        <!-- <video class="w-100" autoplay muted loop playsinline>
-                <source src="./images/bg-video2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video> -->
-        <!-- </div> -->
-
-        <!-- <div class="title_header position-absolute top-50 start-50 translate-middle ">
-            <h1 class="text-white ">Bays cant start with out perfect shoes.</h1>
-            <a class="btn btn-outline-light btn-lg justify-center" href="#">View All Collection</a>
-        </div> -->
 
     </header>
     <main>
@@ -112,7 +105,8 @@
                 <form id="signupForm">
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email here" required />
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email here"
+                            required />
                     </div>
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
@@ -120,15 +114,18 @@
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required />
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password"
+                            required />
                     </div>
                     <div class="mb-3">
                         <label for="confirmPassword" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="confirmPassword" placeholder="Re-enter your password" required />
+                        <input type="password" class="form-control" id="confirmPassword"
+                            placeholder="Re-enter your password" required />
                     </div>
                     <div class="mb-3">
                         <label for="phone" class="form-label">Phone Number</label>
-                        <input type="number" class="form-control" id="phone" placeholder="Enter your phone number here" required />
+                        <input type="number" class="form-control" id="phone" placeholder="Enter your phone number here"
+                            required />
                     </div>
                     <div class="mb-3 gender-section">
                         <h5>Gender</h5>
@@ -145,16 +142,13 @@
                 </form>
                 <div id="result" class="mt-4"></div>
             </div>
-            
+
             <!-- Image Section -->
             <div class="image-container px-4">
                 <img src="./images/signup.jpg" alt="Sign Up Image" class="img-fluid full-width-image" />
             </div>
         </div>
     </main>
-    
-    
-
     <footer>
         <div class="container_footer bg-black">
             <div class="container cotainer_logo_footer">

@@ -455,6 +455,19 @@
     </script>
 
     <!-- quantity buttons -->
+    <script>
+        function increaseQuantity() {
+            var quantityInput = document.getElementById("quantity");
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+        }
+
+        function decreaseQuantity() {
+            var quantityInput = document.getElementById("quantity");
+            if (quantityInput.value > 1) {
+                quantityInput.value = parseInt(quantityInput.value) - 1;
+            }
+        }
+    </script>
     <script src="./bootstrap_5.3/js/bootstrap.bundle.min.js"></script>
     <script src="./js/details.js"></script>
 </body>
